@@ -1,0 +1,355 @@
+/*-----メインメニュー-----*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Corben', cursive,'メイリオ', 'Meiryo';
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    margin: 0;
+    font-size:40px;
+    font-weight: bold;
+    padding: 0 40px 0px 10px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.h1 {
+    position: absolute;
+    top: 100%; 
+    right: 100%;
+    transform: translate(50%,50%);
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 12em;
+    font-weight: 700;
+    color: #e93939;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+
+/* TOPビジュアル画像-------- */
+.topimg img {
+    margin-top: 30px;
+    height: 100%; /* 全画面表示 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#img-content {
+    text-align: center;
+}
+
+.topimg, .topimg > img {
+    margin: 0; padding: 0;
+    border: 0;
+}
+
+.topimg {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.topimg:after {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    box-shadow: inset 0px 0px 15px 15px #fff;
+    content: "";
+}
+
+/* .img_1{
+    animation: fadeIn;
+    animation-duration: 4.2s; 
+    animation-timing-function:ease 0.3s;
+    animation-delay: 5s; 
+    animation-iteration-count: infinite;
+}
+
+.img_2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fadeIn;
+    animation-duration: 8.2s; 
+    animation-timing-function:ease 0.3s;
+    animation-delay: 5s; 
+    animation-iteration-count: infinite;
+} */
+
+/* .img_2{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0} 
+    12.5% {opacity: 1} 
+    37.5% {opacity: 1} 
+    50% {opacity: 0} 
+} */
+
+.topimg {
+	margin: auto;
+	background-color: white;
+	position: relative;
+}
+
+.topimg img {
+	animation-name: album;
+	-webkit-animation-name: album;
+	animation-duration: 32s;
+	-webkit-animation-duration: 32s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	opacity: 0;
+}
+
+.topimg .img_1 {
+	display: block;
+	margin: 0 auto;
+}
+
+.topimg .img_2 {
+	animation-delay:9s;
+	-webkit-animation-delay:s9;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.topimg .img_3 {
+	animation-delay:17s;
+	-webkit-animation-delay:17s;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.topimg .img_4 {
+	animation-delay:25s;
+	-webkit-animation-delay:25s;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@keyframes album {
+	0% {opacity: 0;}
+	25% {opacity: 1;}
+    50% {opacity: 0;}
+    /* 75% {opacity: 0.5;}    
+	100% {opacity: 0;} */
+}
+@-webkit-keyframes album {
+	0% {opacity: 0;}
+	25% {opacity: 1;}
+    50% {opacity: 0;}
+    /* 75% {opacity: 0.5;}    
+	100% {opacity: 0;} */
+}
+
+/*------*/
+
+#global-nav ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    
+}
+
+#global-nav ul li {
+    font-size: 25px;
+}
+
+li+ li{
+    border-left: 1px solid #333;
+}
+
+#global-nav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    padding: 2px 50px 2px 50px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+ }
+
+#global-nav a:hover {
+    background-color:#bbb9b9;
+    color: rgb(255, 254, 254);
+    font-weight: bolder;
+    transition: all 0s;
+}
+
+/* #global-nav a:hover {
+    background-color:#bbb9b9;
+    color: rgb(255, 254, 254);
+    font-weight: bolder;
+    transition: all .50s;
+} */
+
+#global-nav a::after {
+    position: absolute;
+    bottom:0px;
+    left: 0;
+    content: '';
+    width: 98%;
+    height: 3px;
+    background: black;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+
+#global-nav a:hover::after {
+    transform: scale(1, 1);
+}
+
+#global-nav {
+    position: sticky;
+    top: 0;
+}
+
+/*----------*/
+
+/*TOPIX-----*/
+
+h3.news {
+    text-align: center;
+    font-size: 40px;
+    padding:10px 0 0 0;
+    margin: 100px 0 0 0 ;
+}
+
+#inner {
+    display: block;
+    margin: 0 0 0 120px;
+    margin-bottom: 0;
+    font-size: 18px;
+    /* border-bottom:1px solid black;     */
+}
+
+dl.event {
+    width: 80%;
+    height: 200px;
+    margin: 0 0 .5em 170px;
+    padding: 20px 20px;
+}
+
+dt  {
+    margin-left: 50px;
+    margin-right: 5px;
+    width: 20%;
+    float: left;
+    clear: left;
+    text-align: right;
+}
+
+.event dd {
+    float: left;
+}
+
+.tag {
+    text-align: center;
+    width: 10%;
+}
+
+.tag01 {
+    padding: 0 16px;
+    background-color: rgb(235, 197, 197);
+}
+
+.tag02 {
+    background-color: rgb(201, 206, 241);
+    
+}
+
+dd.caption {
+    margin-left: 5px;
+    width: 30%;
+    font-family: 'Corben', cursive,'メイリオ', 'Meiryo';
+}
+
+/*-----TOPIX-----*/
+
+/*-----photo-----*/
+
+h3.photo {
+    text-align: center;
+    font-size: 50px;
+    padding:10px 0 0 0;
+    margin: 100px 0 0 0;
+}
+
+.wrapp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+/* .wrapp {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(30%, 1fr)
+    );
+    column-gap: 5px;
+    row-gap: 5px;
+} */
+
+.wrapp div {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+}
+
+.wrapp img {
+    border-radius: 50%;
+    /* width: 250px;
+    height: 250px; */
+    width: 100%;
+    /* object-fit: over; */
+    /* padding-right: 20px;   
+    margin-bottom: 50px; */
+}
+
+.wrapp p {
+    height: 60px;
+}
